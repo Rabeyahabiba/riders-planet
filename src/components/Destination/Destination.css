@@ -1,0 +1,21 @@
+/* .container{
+    display: grid; 
+   grid-template-columns: auto auto ;  
+   grid-gap :30px ;
+} */
+.image{
+    
+   
+    float:left;
+   
+    width:100%;
+        border-radius:50%;
+        width:250px;
+        height:250px; 
+        border: 3px solid rgb(94, 94, 117);
+        margin: 0 auto;
+}
+.form{
+    background-color: aquamarine;
+    border-radius:50%;
+}
