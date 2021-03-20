@@ -18,38 +18,38 @@ import Contact from './components/Contact/Contact';
 
 export const UserContext = createContext();
 function App() {
-  const [loggedInUser, setLoggedInUser] =useState ({});
+  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <p>Name: {loggedInUser.name}</p>
-    <Router>
-    <Header/>
-    <Switch>
-      <Route path="/home">
-        <Home />       
-      </Route>      
-      <Route path="/destination">
-        <Destination />
-      </Route>
-      <Route path="/blog">
-        <Blog />
-        </Route>
-        <Route path="/login">
-        <Login />
-      </Route>
-      <Route path="/contact">
-        <Contact />
-      </Route>
-      <PrivateRoute path="/book/:vehicleType"> 
-        <Book />
-      </PrivateRoute>
-     <Route exact path="/">
-        <Home />
-      </Route>
-    </Switch>
-</Router>
-</UserContext.Provider>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <PrivateRoute path="/destination">
+            <Destination />
+          </PrivateRoute>
+          <Route path="/blog">
+            <Blog />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <PrivateRoute path="/book/:vehicleType">
+            <Book />
+          </PrivateRoute>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </UserContext.Provider>
   );
- }
+}
 
- export default App; 
+export default App;

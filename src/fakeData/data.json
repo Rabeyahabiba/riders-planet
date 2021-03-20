@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Bike",
+        "image": "https://static.businessworld.in/article/article_extra_large_image/1524645143_eRSw9z_Suzuki-GSX-S750_Red_Diagonal.jpg",
+        "capacity": "1",
+        "vehicleType":"Bike"
+        
+    },
+    {
+        "title": "Car",
+        "image": "https://specials-images.forbesimg.com/imageserve/5d3703e2f1176b00089761a6/960x0.jpg?cropX1=836&cropX2=5396&cropY1=799&cropY2=3364",
+        "capacity": "2",
+        "vehicleType":"Car"
+        
+    },
+    {
+        "title": "Bus",
+        "image": "https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/very_big_1/public/feature/images/http_cdn.cnn_.com_cnnnext_dam_assets_200826183306-adventures-overlandimage-from-ios.jpg?itok=McotSUS2",
+        "capacity": "1",
+        "vehicleType":"Bus"
+       
+    },
+    {
+        "title": "Train",
+        "image": "https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/big_2/public/feature/images/train_40_0_0.jpg?itok=cu9tH73V&c=2fb2b49a6f0ebfb8518f5c386867d767",
+        "capacity": "1",
+        "vehicleType":"Train"
+    },
+    {
+        "title": "Cycle",
+        "image": "https://cdn.zeebiz.com/sites/default/files/styles/zeebiz_850x478/public/2020/11/18/133925-ev.PNG?itok=9oIqkcnQ",
+        "capacity": "1",
+        "vehicleType":"Cycle"
+        
+    }
+
+
+]

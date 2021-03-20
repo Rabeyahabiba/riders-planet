@@ -1,22 +1,24 @@
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
+import React from 'react';
 
-
-export default function Vehicle({vehicle}){
-//   const classes = useStyles();
+const Vehicle = (props) => {
   const history = useHistory()
-    const handleLogin = (vehicleType) => {
-        history.push(`/login/${vehicleType}`);
-    }
+  const { image, title, capacity } = props.vehicle;
+  const vehicleStyle = { border: '1px solid salmon', borderRadius: '5px', margin: '5px', padding: '10px', float: 'left' }
+  const handleBook = (vehicleType) => {
+    history.push(`/book/${vehicleType}`);
+  }
+
   return (
-      <div>
-    
-      <img src={`/images/${vehicle.vehicleType}.png`} alt=""/>
-     
-        <Button onClick={() => handleLogin(vehicle.vehicleType)} variant="contained" color="primary">
-           Bike
+    <div className="vehicle-container" style={vehicleStyle} >
+      <img style={{ height: '150px' }} src={image} alt="" />
+      <h2 style={{ textAlign: 'center' }}>{title}</h2>
+      <Button onClick={() => handleBook(props.vehicle.vehicleType)} variant="contained" color="primary">
+        Book
         </Button>
-     
     </div>
   );
-}
+};
+
+export default Vehicle;
