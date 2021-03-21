@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 import header from '../../images/Bg.png';
 import logo from "../../images/Urban Riders.png"
-import bike from "../../images/Frame-1.png"
+
 
 
 const Header = () => {
@@ -31,7 +31,7 @@ const Header = () => {
                     </li>
                     <li>
                        
-                        <Link className="btn-book" to="/book">Book</Link>
+                        <Link className="btn-book" to="/login">Book</Link>
                     </li>
                 </ul>
             </nav>

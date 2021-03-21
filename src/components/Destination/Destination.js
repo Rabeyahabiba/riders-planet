@@ -6,6 +6,7 @@ import { Form } from 'react-bootstrap';
 
 const Destination = (props) => {
          const destination =props.destination;
+         document.title ="Destination";
     return (
         <div className="container" >
             <div >              
@@ -20,8 +21,7 @@ const Destination = (props) => {
                     </Form.Group>
                     <Button variant="primary" type="submit" >
                         Search
-                    </Button>
-                    {/* <h2> Selected vehicle : {destination.length} </h2> */}
+                    </Button>                
                 </Form>
            </div>
             <div className="image" style={{ textAlign: 'center' }}>

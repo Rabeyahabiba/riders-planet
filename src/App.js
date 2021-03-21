@@ -11,6 +11,7 @@ import Book from './components/Book/Book';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Destination from './components/Destination/Destination';
 import Blog from './components/Blog/Blog';
+import Map from './components/Map/Map';
 import { useState } from 'react';
 import { createContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -40,6 +41,9 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
+          <Route path="/map">
+            <Map />
+          </Route>         
           <PrivateRoute path="/book/:vehicleType">
             <Book />
           </PrivateRoute>

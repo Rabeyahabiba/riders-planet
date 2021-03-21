@@ -6,7 +6,8 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
-
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
@@ -15,6 +16,7 @@ const Login = () => {
   const history = useHistory();
   const location = useLocation();
   const { from } = location.state || { from: { pathname: "/" } };
+  document.title ="Login";
   const [newUser, setNewUser] = useState(false);
   const [user, setUser] = useState({
     isSignedIn: false,
@@ -164,12 +166,15 @@ const Login = () => {
 
       <p style={{ color: 'red' }}>{user.error}</p>
       {user.success && <p style={{ color: 'green' }}>User {newUser ? 'Created' : 'logged in'} Successfully</p>}
+      {<p> Don't have account? <Link to ="/contact">Create an account</Link></p>
+  }
       {
-        user.isSignedIn ? <button onClick={handleSignOut}>Sign out</button> :
-          <button onClick={handleSignIn}>Continue With Google</button>
+        user.isSignedIn ? <Button variant="primary" type="submit" onClick={handleSignOut}>Sign out</Button> :
+          <Button variant="secondary" type="submit" onClick={handleSignIn}>Continue With Google</Button>
       }
       <br />
-      <button onClick={handleFbSignIn}> Continue With Facebook</button>
+
+      <Button variant="info" type="submit" onClick={handleFbSignIn}> Continue With Facebook</Button>
       {
         user.isSignedIn && <div>
           <p> Welcome, {user.name} </p>
