@@ -24,6 +24,8 @@ const Book = () => {
                         <Form.Label>Pick To</Form.Label>
                         <Form.Control type="password" placeholder="Enter Your Destination" />
                     </Form.Group>
+                    <Form.Label>Departure</Form.Label>
+                            <Form.Control class="inp-style" type="date" name=""></Form.Control>
                     <Button variant="primary" type="submit"  > Search</Button>
                 </Form>
             </div>
