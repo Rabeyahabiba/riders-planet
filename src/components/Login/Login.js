@@ -166,7 +166,7 @@ const Login = () => {
 
       <p style={{ color: 'red' }}>{user.error}</p>
       {user.success && <p style={{ color: 'green' }}>User {newUser ? 'Created' : 'logged in'} Successfully</p>}
-      {<p> Don't have account? <Link to ="/contact">Create an account</Link></p>
+      {<p> Don't have account? <Link to ="/login">Create an account</Link></p>
   }
       {
         user.isSignedIn ? <Button variant="primary" type="submit" onClick={handleSignOut}>Sign out</Button> :
